@@ -1,2 +1,2 @@
-# urjc-adcs
-Arquitectura, Diseño y Calidad Software
+# Mastermind v1.0 - domainModel
+`Solución modelo de dominio`
