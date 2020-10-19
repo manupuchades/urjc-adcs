@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class Code {
 	
-	public static final String codeValidator = "^[UGRY]{4}$";
-	
 	protected static final int CODE_SIZE = 4;
 	
 	private CodeColor[] code;

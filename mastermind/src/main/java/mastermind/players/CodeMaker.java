@@ -2,8 +2,8 @@ package mastermind.players;
 
 import mastermind.board.Board;
 import mastermind.board.Code;
-import mastermind.ui.Dialog;
-import mastermind.ui.Message;
+import mastermind.views.GameOverView;
+import mastermind.views.WinnerView;
 
 public class CodeMaker {
 	private Board board;
@@ -15,10 +15,10 @@ public class CodeMaker {
 
 	public boolean provideFeedback() {
 		if (board.isBoardComplete()) {
-			Dialog.write(Message.FEEDBACK_GAMEOVER);
+			GameOverView.write();
 			return false;
 		} else if (board.isWinner()) {
-			Dialog.write(Message.FEEDBACK_YOU_WIN);
+			WinnerView.write();
 			return false;
 		} else {
 			return true;
