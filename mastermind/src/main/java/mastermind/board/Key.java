@@ -32,9 +32,7 @@ public class Key {
 	}
 
 	private void setFeedback(int black_keys, int white_keys) {
-		
-		System.out.println("Black : " + black_keys + "; White : " + white_keys);
-		
+			
 		feedback = new KeyColor[Code.CODE_SIZE];
 		
 		for (int i = 0; i < Code.CODE_SIZE; i++) {
