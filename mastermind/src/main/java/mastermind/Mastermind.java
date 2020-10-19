@@ -1,21 +1,19 @@
 package mastermind;
 
 import mastermind.board.Board;
-import mastermind.codebraker.CodeBraker;
-import mastermind.codebraker.CodeBrakerFactory;
-import mastermind.codemaker.CodeMaker;
-import mastermind.codemaker.CodeMakerFactory;
+import mastermind.players.CodeBreaker;
+import mastermind.players.CodeMaker;
 import mastermind.ui.Dialog;
 
 public class Mastermind {
 
 	private Board board;
 	private CodeMaker codeMaker;
-	private CodeBraker codeBraker;
+	private CodeBreaker codeBreaker;
 	
 	Mastermind(){
-		this.codeMaker = CodeMakerFactory.getCodeMaker(this.board);
-		this.codeBraker = CodeBrakerFactory.getCodeBraker(this.board);
+		this.codeMaker = new CodeMaker(this.board);
+		this.codeBreaker = new CodeBreaker(this.board);
 	}
 
 	public static void main(String[] args) {
@@ -27,7 +25,7 @@ public class Mastermind {
 	private void play() {
 		do {
 			this.board.write();
-			this.codeBraker.makeGuess();
+			this.codeBreaker.makeGuess();
 		} while (this.codeMaker.provideFeedback());
 	}
 }
