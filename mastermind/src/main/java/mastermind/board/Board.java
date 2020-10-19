@@ -1,5 +1,6 @@
 package mastermind.board;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import mastermind.ui.Dialog;
@@ -14,25 +15,32 @@ public class Board {
 	
 	private List<Key> feedbacks;
 	
-	public Board(Code secret) {
+	public Board() {
+		guesses = new ArrayList<Code>();
+		feedbacks = new ArrayList<Key>();
+	}
+	
+	public void setSecret(Code secret) {
 		this.secret = secret;
 	}
 	
 	public void write() {
+		System.out.println(secret.write());
+		
 		Dialog.writeBoard(BOARD_SIZE, guesses, feedbacks);
 	}
 	
-	public void add(Code guess) {
+	public void add(Code guess) {	
 		guesses.add(guess);
+		add(new Key(secret, guess));
 	}
 	
-	public void add(Key feedback) {
+	private void add(Key feedback) {
 		feedbacks.add(feedback);
 	}
 	
-	public boolean checkLastCode() {
-		
-		return false;
+	public boolean isWinner() {
+		return feedbacks.get(feedbacks.size() - 1).isWinner();
 	}
 	
 	public boolean isBoardComplete() {

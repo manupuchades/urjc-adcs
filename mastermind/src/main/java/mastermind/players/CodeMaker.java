@@ -10,14 +10,14 @@ public class CodeMaker {
 
 	public CodeMaker(Board board) {
 		this.board = board;
-		board = new Board(createSecret());
+		board.setSecret(createSecret());
 	}
 
 	public boolean provideFeedback() {
 		if (board.isBoardComplete()) {
 			Dialog.write(Message.FEEDBACK_GAMEOVER);
 			return false;
-		} else if (board.checkLastCode()) {
+		} else if (board.isWinner()) {
 			Dialog.write(Message.FEEDBACK_YOU_WIN);
 			return false;
 		} else {

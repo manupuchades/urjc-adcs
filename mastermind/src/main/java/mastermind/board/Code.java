@@ -6,39 +6,44 @@ public class Code {
 	
 	public static final String codeValidator = "^[UGRY]{4}$";
 	
-	private static final int CODE_SIZE = 4;
+	protected static final int CODE_SIZE = 4;
 	
 	private CodeColor[] code;
 	
-	public Code(String code) {
+	public Code(String input) {
+		CodeColor[] pattern = new CodeColor[CODE_SIZE];
 		
+		for (int i = 0; i<CODE_SIZE; i++) {
+			pattern[i] = CodeColor.getColor(String.valueOf(input.charAt(i)));	
+		}
+		
+		this.code = pattern;
 	}
 	
 	public Code(CodeColor[] code) {
 		this.code = code;
 	}
 	
-	public static boolean isValid(String input) {
-		return true;
-	}
-	
 	public String write() {
-		String code = "";
+		String output = "| ";
 		
-		for (int i = 0; i<CODE_SIZE; i++) {
-			code.concat(this.code[i].getColor());
+		for (CodeColor cc:  this.code) {
+			output = output.concat(cc.getColor()).concat(" | ");	
 		}
-		
-		return code;
+		return output;
 	}
 	
 	public static Code getRandomCode() {
-		CodeColor[] code = new CodeColor[4];
+		CodeColor[] pattern = new CodeColor[CODE_SIZE];
 		
 		for (int i = 0; i<CODE_SIZE; i++) {
-			code[i] = CodeColor.values()[new Random().nextInt(CODE_SIZE)];
+			pattern[i] = CodeColor.values()[new Random().nextInt(CODE_SIZE)];
 		}
 		
-		return new Code(code);
+		return new Code(pattern);
+	}
+	
+	public CodeColor getColorAt(int i) {
+		return code[i];
 	}
 }

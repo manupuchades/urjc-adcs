@@ -12,6 +12,7 @@ public class Mastermind {
 	private CodeBreaker codeBreaker;
 	
 	Mastermind(){
+		this.board = new Board();
 		this.codeMaker = new CodeMaker(this.board);
 		this.codeBreaker = new CodeBreaker(this.board);
 	}

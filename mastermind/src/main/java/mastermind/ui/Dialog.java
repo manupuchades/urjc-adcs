@@ -13,7 +13,7 @@ public class Dialog {
 	public static String read(String validator, Message inputMessage, Message errorMessage) {
 		write(inputMessage);
 		String input = read();
-
+		
 		if (Pattern.matches(validator, input)) {
 			return input;
 		} else {
@@ -24,6 +24,16 @@ public class Dialog {
 
 	public static void writeBoard(int size, List<Code> guesses, List<Key> feedbacks) {
 		
+		write(Message.LINE_SEPARATOR);
+		for (int i = 0; i<size; i++) {
+			if (guesses!= null && guesses.size()>i) {
+				write(guesses.get(i).write().concat(Message.BOARD_SEPARATOR.getMessage()).concat(feedbacks.get(i).write()));
+			}
+			else {
+				write(Message.LINE_EMPTY);
+			}
+		}
+		write(Message.LINE_SEPARATOR);
 	}
 	
 	public static boolean continueGame() {
@@ -31,9 +41,13 @@ public class Dialog {
 	}
 
 	public static void write(Message message) {
-		Console.getInstance().write(message.getMessage());
+		write(message.getMessage());
 	}
 
+	private static void write(String output) {
+		Console.getInstance().write(output);
+	}
+	
 	private static String read() {
 		String input = null;
 
