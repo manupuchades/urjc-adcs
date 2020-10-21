@@ -32,7 +32,7 @@ public class Board {
 	}
 
 	public boolean isWinner() {
-		return feedbacks.get(feedbacks.size() - 1).isWinner();
+		return feedbacks.get(feedbacks.size() - 1).isAllBlack();
 	}
 
 	public boolean isBoardComplete() {

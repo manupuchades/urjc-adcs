@@ -12,7 +12,7 @@ public enum Message {
 	ENTER_CODEBREAKER ("Select codebreaker (User/Machine)? : "),
 	ENTER_SECRET_CODE ("Enter a secret code privately: "),
 	ENTER_PATTERN_CODE ("Enter a code pattern {blUe, Green, Red, Yellow}: "),
-	ENTER_CONTINUE_GAME ("Continue game (y/n)? : "),
+	ENTER_RESUME_GAME ("Continue game (y/n)? : "),
 	ERROR_INVALID_INPUT ("Input value is not valid."),
 	ERROR_TECHNICAL ("Unexpected error ocurred!");
 	

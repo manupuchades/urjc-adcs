@@ -20,7 +20,7 @@ public class Mastermind {
 	public static void main(String[] args) {
 		do {
 			new Mastermind().play();
-		} while (GameController.continueGame());
+		} while (GameController.resume());
 	}
 
 	private void play() {

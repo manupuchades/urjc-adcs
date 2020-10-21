@@ -7,7 +7,7 @@ public class Key {
 	public Key(Code secret, Code guess) {
 
 		int keys = 0;
-		int black_keys = 0;
+		int blackKeys = 0;
 
 		int[] patternColorCount = new int[CodeColor.values().length - 1];
 		int[] guessColorCount = new int[CodeColor.values().length - 1];
@@ -20,7 +20,7 @@ public class Key {
 			++guessColorCount[subGuess.ordinal()];
 
 			if (subSecret.equals(subGuess)) {
-				++black_keys;
+				++blackKeys;
 			}
 		}
 
@@ -28,20 +28,20 @@ public class Key {
 			keys += Math.min(patternColorCount[i], guessColorCount[i]);
 		}
 
-		this.setFeedback(black_keys, keys - black_keys);
+		this.setFeedback(blackKeys, keys - blackKeys);
 	}
 
-	private void setFeedback(int black_keys, int white_keys) {
+	private void setFeedback(int blackKeys, int whiteKeys) {
 				
 		feedback = new KeyColor[Code.CODE_SIZE];
 		
 		for (int i = 0; i < Code.CODE_SIZE; i++) {
-			if(black_keys > 0) {
+			if(blackKeys > 0) {
 				this.feedback[i] = KeyColor.BLACK;
-				black_keys--;
-			} else if (white_keys > 0) {
+				blackKeys--;
+			} else if (whiteKeys > 0) {
 				this.feedback[i] = KeyColor.WHITE;
-				white_keys--;
+				whiteKeys--;
 			} else {
 				this.feedback[i] = KeyColor.NULL;
 			}
@@ -63,13 +63,12 @@ public class Key {
 		return output;
 	}
 
-	public boolean isWinner() {
-		Boolean winner = true;
-
+	public boolean isAllBlack() {
+		Boolean isAllBlack = true;
+		
 		for (int i = 0; i < Code.CODE_SIZE; i++) {
-			winner = winner && feedback[i].equals(KeyColor.BLACK);
+			isAllBlack = isAllBlack && feedback[i].equals(KeyColor.BLACK);
 		}
-
-		return winner;
+		return isAllBlack;
 	}
 }
