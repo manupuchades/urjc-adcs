@@ -1,10 +1,10 @@
 package mastermind;
 
-import mastermind.board.Board;
-import mastermind.players.CodeBreaker;
-import mastermind.players.CodeBreakerFactory;
-import mastermind.players.CodeMaker;
-import mastermind.players.CodeMakerFactory;
+import mastermind.controllers.CodeBreaker;
+import mastermind.controllers.CodeBreakerFactory;
+import mastermind.controllers.CodeMaker;
+import mastermind.controllers.CodeMakerFactory;
+import mastermind.models.Board;
 import mastermind.views.ContinueView;
 
 public class Mastermind {

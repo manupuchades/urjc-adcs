@@ -1,4 +1,4 @@
-package mastermind.board;
+package mastermind.models;
 
 public enum KeyColor {
 	BLACK ("B"), 

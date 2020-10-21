@@ -1,4 +1,4 @@
-package mastermind.board;
+package mastermind.models;
 
 import java.util.Random;
 

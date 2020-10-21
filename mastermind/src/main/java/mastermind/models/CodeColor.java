@@ -1,4 +1,4 @@
-package mastermind.board;
+package mastermind.models;
 
 public enum CodeColor {
 	BLUE("U"), GREEN("G"), RED("R"), YELLOW("Y"), NULL("_");

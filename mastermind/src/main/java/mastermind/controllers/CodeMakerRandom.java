@@ -1,7 +1,7 @@
-package mastermind.players;
+package mastermind.controllers;
 
-import mastermind.board.Board;
-import mastermind.board.Code;
+import mastermind.models.Board;
+import mastermind.models.Code;
 
 public class CodeMakerRandom extends CodeMaker{
 

@@ -2,8 +2,8 @@ package mastermind.views;
 
 import java.util.List;
 
-import mastermind.board.Code;
-import mastermind.board.Key;
+import mastermind.models.Code;
+import mastermind.models.Key;
 import mastermind.ui.Dialog;
 import mastermind.ui.Message;
 

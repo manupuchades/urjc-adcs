@@ -1,6 +1,6 @@
-package mastermind.players;
+package mastermind.controllers;
 
-import mastermind.board.Board;
+import mastermind.models.Board;
 import mastermind.views.SelectUserCodeBreakerView;
 
 public class CodeBreakerFactory {
