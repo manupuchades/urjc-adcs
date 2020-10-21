@@ -1,2 +1,2 @@
-# Mastermind v1.1
-`Solución vistas separadas de los modelos`
+# Mastermind v2.0
+`Solución básica ampliada`

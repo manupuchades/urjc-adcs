@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mastermind.views.BoardView;
+import mastermind.views.WelcomeView;
 
 public class Board {
 
@@ -16,6 +17,7 @@ public class Board {
 	private List<Key> feedbacks;
 
 	public Board() {
+		WelcomeView.write();
 		guesses = new ArrayList<Code>();
 		feedbacks = new ArrayList<Key>();
 	}

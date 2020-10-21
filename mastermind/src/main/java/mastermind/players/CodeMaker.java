@@ -5,7 +5,7 @@ import mastermind.board.Code;
 import mastermind.views.GameOverView;
 import mastermind.views.WinnerView;
 
-public class CodeMaker {
+public abstract class CodeMaker {
 	private Board board;
 
 	public CodeMaker(Board board) {
@@ -25,7 +25,5 @@ public class CodeMaker {
 		}
 	}
 
-	public Code createSecret() {
-		return Code.getRandomCode();
-	}
+	public abstract Code createSecret();
 }

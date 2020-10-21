@@ -3,6 +3,7 @@ package mastermind;
 import mastermind.board.Board;
 import mastermind.players.CodeBreaker;
 import mastermind.players.CodeMaker;
+import mastermind.players.CodeMakerFactory;
 import mastermind.ui.Dialog;
 import mastermind.views.ContinueView;
 
@@ -14,7 +15,7 @@ public class Mastermind {
 	
 	Mastermind(){
 		this.board = new Board();
-		this.codeMaker = new CodeMaker(this.board);
+		this.codeMaker = CodeMakerFactory.getCodeMaker(this.board);
 		this.codeBreaker = new CodeBreaker(this.board);
 	}
 

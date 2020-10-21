@@ -8,8 +8,9 @@ public enum Message {
 	BOARD_SEPARATOR ("*** "),
 	LINE_EMPTY ("| _ | _ | _ | _ | *** | _ | _ | _ | _ |"),
 	LINE_SEPARATOR ("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"),
-	ENTER_SECRET_CODE ("Secretly enter a code pattern : "),
-	ENTER_PATTERN_CODE ("Enter a code pattern : "),
+	ENTER_CODEMAKER ("Select codemaker (User/Machine)? : "),
+	ENTER_SECRET_CODE ("Enter a secret code privately: "),
+	ENTER_PATTERN_CODE ("Enter a code pattern {blUe, Green, Red, Yellow}: "),
 	ENTER_CONTINUE_GAME ("Continue game (y/n)? : "),
 	ERROR_INVALID_INPUT ("Input value is not valid."),
 	ERROR_TECHNICAL ("Unexpected error ocurred!");
