@@ -6,8 +6,8 @@ import mastermind.ui.Message;
 public class WelcomeView {
 	
 	public static void write() {
-		Dialog.write(Message.BOARD_SEPARATOR);
+		Dialog.write(Message.LINE_SEPARATOR);
 		Dialog.write(Message.TITLE);
-		Dialog.write(Message.BOARD_SEPARATOR);
+		Dialog.write(Message.LINE_SEPARATOR);
 	}
 }
