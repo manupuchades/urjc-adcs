@@ -2,9 +2,9 @@ package mastermind;
 
 import mastermind.board.Board;
 import mastermind.players.CodeBreaker;
+import mastermind.players.CodeBreakerFactory;
 import mastermind.players.CodeMaker;
 import mastermind.players.CodeMakerFactory;
-import mastermind.ui.Dialog;
 import mastermind.views.ContinueView;
 
 public class Mastermind {
@@ -16,7 +16,7 @@ public class Mastermind {
 	Mastermind(){
 		this.board = new Board();
 		this.codeMaker = CodeMakerFactory.getCodeMaker(this.board);
-		this.codeBreaker = new CodeBreaker(this.board);
+		this.codeBreaker = CodeBreakerFactory.getCodeBreaker(this.board);
 	}
 
 	public static void main(String[] args) {

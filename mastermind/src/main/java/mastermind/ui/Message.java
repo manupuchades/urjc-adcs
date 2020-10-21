@@ -9,6 +9,7 @@ public enum Message {
 	LINE_EMPTY ("| _ | _ | _ | _ | *** | _ | _ | _ | _ |"),
 	LINE_SEPARATOR ("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"),
 	ENTER_CODEMAKER ("Select codemaker (User/Machine)? : "),
+	ENTER_CODEBREAKER ("Select codebreaker (User/Machine)? : "),
 	ENTER_SECRET_CODE ("Enter a secret code privately: "),
 	ENTER_PATTERN_CODE ("Enter a code pattern {blUe, Green, Red, Yellow}: "),
 	ENTER_CONTINUE_GAME ("Continue game (y/n)? : "),
