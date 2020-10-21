@@ -1,14 +1,14 @@
-package mastermind.controllers;
+package mastermind.controllers.players;
 
 import mastermind.models.Board;
 import mastermind.models.Code;
 import mastermind.views.GameOverView;
 import mastermind.views.WinnerView;
 
-public abstract class CodeMaker {
+public abstract class CodeMakerController {
 	private Board board;
 
-	public CodeMaker(Board board) {
+	public CodeMakerController(Board board) {
 		this.board = board;
 		board.setSecret(createSecret());
 	}

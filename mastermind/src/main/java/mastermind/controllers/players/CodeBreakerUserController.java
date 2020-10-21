@@ -1,12 +1,12 @@
-package mastermind.controllers;
+package mastermind.controllers.players;
 
 import mastermind.models.Board;
 import mastermind.models.Code;
 import mastermind.views.EnterCodeView;
 
-public class CodeBreakerUser extends CodeBreaker{
+public class CodeBreakerUserController extends CodeBreakerController{
 
-	public CodeBreakerUser(Board board) {
+	public CodeBreakerUserController(Board board) {
 		super(board);
 	}
 

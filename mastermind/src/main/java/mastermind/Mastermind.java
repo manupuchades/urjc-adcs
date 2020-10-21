@@ -1,21 +1,20 @@
 package mastermind;
 
-import mastermind.controllers.CodeBreaker;
-import mastermind.controllers.CodeBreakerFactory;
-import mastermind.controllers.CodeMaker;
-import mastermind.controllers.CodeMakerFactory;
 import mastermind.controllers.GameController;
+import mastermind.controllers.PlayersFactory;
+import mastermind.controllers.players.CodeBreakerController;
+import mastermind.controllers.players.CodeMakerController;
 
 public class Mastermind {
 
 	private GameController game;
-	private CodeMaker codeMaker;
-	private CodeBreaker codeBreaker;
+	private CodeMakerController codeMaker;
+	private CodeBreakerController codeBreaker;
 	
 	Mastermind(){
 		this.game = new GameController();
-		this.codeMaker = CodeMakerFactory.getCodeMaker(this.game.getBoard());
-		this.codeBreaker = CodeBreakerFactory.getCodeBreaker(this.game.getBoard());
+		this.codeMaker = PlayersFactory.getCodeMaker(this.game.getBoard());
+		this.codeBreaker = PlayersFactory.getCodeBreaker(this.game.getBoard());
 	}
 
 	public static void main(String[] args) {

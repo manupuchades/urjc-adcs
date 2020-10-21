@@ -1,11 +1,11 @@
-package mastermind.controllers;
+package mastermind.controllers.players;
 
 import mastermind.models.Board;
 import mastermind.models.Code;
 
-public class CodeBreakerRandom extends CodeBreaker{
+public class CodeBreakerRandomController extends CodeBreakerController{
 	
-	public CodeBreakerRandom(Board board) {
+	public CodeBreakerRandomController(Board board) {
 		super(board);
 	}
 
