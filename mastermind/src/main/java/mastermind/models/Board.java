@@ -3,9 +3,6 @@ package mastermind.models;
 import java.util.ArrayList;
 import java.util.List;
 
-import mastermind.views.BoardView;
-import mastermind.views.WelcomeView;
-
 public class Board {
 
 	private Code secret;
@@ -17,17 +14,12 @@ public class Board {
 	private List<Key> feedbacks;
 
 	public Board() {
-		WelcomeView.write();
 		guesses = new ArrayList<Code>();
 		feedbacks = new ArrayList<Key>();
 	}
 
 	public void setSecret(Code secret) {
 		this.secret = secret;
-	}
-
-	public void write() {
-		BoardView.write(BOARD_SIZE, guesses, feedbacks);
 	}
 
 	public void add(Code guess) {
@@ -45,5 +37,17 @@ public class Board {
 
 	public boolean isBoardComplete() {
 		return guesses.size() >= (BOARD_SIZE);
+	}
+
+	public static Integer getBoardSize() {
+		return BOARD_SIZE;
+	}
+
+	public List<Code> getGuesses() {
+		return guesses;
+	}
+
+	public List<Key> getFeedbacks() {
+		return feedbacks;
 	}
 }
