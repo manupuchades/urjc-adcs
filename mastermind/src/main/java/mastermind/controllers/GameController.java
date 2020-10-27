@@ -20,11 +20,11 @@ public class GameController {
 		BoardView.write(Board.getBoardSize(), board.getGuesses(), board.getFeedbacks());
 	}
 	
-	public static String readCodeBreakerType() {
+	public String readCodeBreakerType() {
 		return SelectUserCodeBreakerView.read();
 	}
 	
-	public static String readCodeMakerType() {
+	public String readCodeMakerType() {
 		return SelectUserCodeMakerView.read();
 	}
 	

@@ -13,8 +13,8 @@ public class Mastermind {
 	
 	Mastermind(){
 		this.game = new GameController();
-		this.codeMaker = PlayersFactory.getCodeMaker(this.game.getBoard(), GameController.readCodeMakerType());
-		this.codeBreaker = PlayersFactory.getCodeBreaker(this.game.getBoard(), GameController.readCodeBreakerType());
+		this.codeMaker = PlayersFactory.getCodeMaker(this.game.getBoard(), this.game.readCodeMakerType());
+		this.codeBreaker = PlayersFactory.getCodeBreaker(this.game.getBoard(), this.game.readCodeBreakerType());
 	}
 
 	public static void main(String[] args) {
