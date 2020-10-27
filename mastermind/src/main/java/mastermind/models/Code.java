@@ -23,10 +23,10 @@ public class Code {
 	}
 	
 	public String write() {
-		String output = "| ";
+		String output = "";
 		
 		for (CodeColor cc:  this.code) {
-			output = output.concat(cc.getColor()).concat(" | ");	
+			output = output.concat(cc.getColor());	
 		}
 		return output;
 	}

@@ -43,11 +43,19 @@ public class Board {
 		return BOARD_SIZE;
 	}
 
-	public List<Code> getGuesses() {
-		return guesses;
+	public List<String> getGuesses() {
+		List<String> writeGuesses = new ArrayList<String>();
+		for (Code c : this.guesses) {
+			writeGuesses.add(c.write());
+		}
+		return writeGuesses;
 	}
 
-	public List<Key> getFeedbacks() {
-		return feedbacks;
+	public List<String> getFeedbacks() {
+		List<String> writeFeedbacks = new ArrayList<String>();
+		for (Key k : this.feedbacks) {
+			writeFeedbacks.add(k.write());
+		}
+		return writeFeedbacks;
 	}
 }

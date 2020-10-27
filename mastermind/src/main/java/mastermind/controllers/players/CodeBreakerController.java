@@ -1,8 +1,6 @@
 package mastermind.controllers.players;
 
 import mastermind.models.Board;
-import mastermind.models.Code;
-import mastermind.views.EnterCodeView;
 
 public abstract class CodeBreakerController {
 

@@ -49,15 +49,10 @@ public class Key {
 	}
 
 	public String write() {
-		String output = "| ";
-
-		for (int i = 0; i < Code.CODE_SIZE; i++) {
-			output.concat(this.feedback[i].getColor());
-			output.concat(" |");
-		}
+		String output = "";
 		
 		for (KeyColor kc:  this.feedback) {
-			output = output.concat(kc.getColor()).concat(" | ");	
+			output = output.concat(kc.getColor());	
 		}
 
 		return output;
@@ -66,8 +61,8 @@ public class Key {
 	public boolean isAllBlack() {
 		Boolean isAllBlack = true;
 		
-		for (int i = 0; i < Code.CODE_SIZE; i++) {
-			isAllBlack = isAllBlack && feedback[i].equals(KeyColor.BLACK);
+		for (KeyColor kc:  this.feedback) {
+			isAllBlack = isAllBlack && kc.equals(KeyColor.BLACK);
 		}
 		return isAllBlack;
 	}
