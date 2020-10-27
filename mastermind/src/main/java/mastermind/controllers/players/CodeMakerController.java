@@ -13,7 +13,7 @@ public abstract class CodeMakerController {
 		board.setSecret(createSecret());
 	}
 
-	public boolean provideFeedback() {
+	public boolean continueGame() {
 		if (board.isBoardComplete()) {
 			GameOverView.write();
 			return false;

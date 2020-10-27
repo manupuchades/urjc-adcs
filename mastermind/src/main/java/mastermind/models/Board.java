@@ -43,19 +43,19 @@ public class Board {
 		return BOARD_SIZE;
 	}
 
-	public List<String> getGuesses() {
-		List<String> writeGuesses = new ArrayList<String>();
+	public List<String> getPrintableGuesses() {
+		List<String> printableGuesses = new ArrayList<String>();
 		for (Code c : this.guesses) {
-			writeGuesses.add(c.write());
+			printableGuesses.add(c.write());
 		}
-		return writeGuesses;
+		return printableGuesses;
 	}
 
-	public List<String> getFeedbacks() {
-		List<String> writeFeedbacks = new ArrayList<String>();
+	public List<String> getPrintableFeedbacks() {
+		List<String> printableFeedbacks = new ArrayList<String>();
 		for (Key k : this.feedbacks) {
-			writeFeedbacks.add(k.write());
+			printableFeedbacks.add(k.write());
 		}
-		return writeFeedbacks;
+		return printableFeedbacks;
 	}
 }

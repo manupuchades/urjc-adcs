@@ -17,7 +17,7 @@ public class GameController {
 	}
 	
 	public void write() {
-		BoardView.write(Board.getBoardSize(), board.getGuesses(), board.getFeedbacks());
+		BoardView.write(Board.getBoardSize(), board.getPrintableGuesses(), board.getPrintableFeedbacks());
 	}
 	
 	public String readCodeBreakerType() {

@@ -25,8 +25,8 @@ public class Mastermind {
 
 	private void play() {
 		do {
-			this.game.write();
 			this.codeBreaker.makeGuess();
-		} while (this.codeMaker.provideFeedback());
+			this.game.write();
+		} while (this.codeMaker.continueGame());
 	}
 }
