@@ -1,13 +1,14 @@
 package mastermind.views;
 
+import mastermind.ui.ConsoleFormat;
 import mastermind.ui.Dialog;
-import mastermind.ui.Message;
+import mastermind.ui.MessageLibrary;
 
 public class ErrorView {
 
 	public static void write() {
-		Dialog.write(Message.BOARD_SEPARATOR);
-		Dialog.write(Message.ERROR_TECHNICAL);
-		Dialog.write(Message.BOARD_SEPARATOR);
+		Dialog.write(ConsoleFormat.BOARD_SEPARATOR);
+		Dialog.write(MessageLibrary.ERROR_TECHNICAL.getMessage());
+		Dialog.write(ConsoleFormat.BOARD_SEPARATOR);
 	}
 }

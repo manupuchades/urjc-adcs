@@ -1,25 +1,30 @@
 package mastermind.ui;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 import mastermind.views.ErrorView;
 
 public class Dialog {
 
-	public static String read(String validator, Message inputMessage, Message errorMessage) {
-		write(inputMessage);
+	public static String read(String validator, MessageLibrary inputMessage, MessageLibrary errorMessage) {
+		write(inputMessage.getMessage());
 		String input = read();
 		
 		if (Pattern.matches(validator, input)) {
 			return input;
 		} else {
-			write(errorMessage);
+			write(errorMessage.getMessage());
 			return read(validator, inputMessage, errorMessage);
 		}
 	}
 
-	public static void write(Message message) {
+	public static void write(ConsoleFormat message, Object...args) {		
+		write(String.format(message.getMessage(), args));
+	}
+	
+	public static void write(MessageLibrary message) {		
 		write(message.getMessage());
 	}
 
