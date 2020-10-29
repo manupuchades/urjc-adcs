@@ -9,7 +9,7 @@ public class CodeBreakerRandomController extends CodeBreakerController{
 		super(board);
 	}
 
-	public void makeGuess() {
+	public void play() {
 		sleepOneSecond();
 		this.board.add(Code.getRandomCode());
 	}

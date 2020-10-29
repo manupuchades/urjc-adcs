@@ -10,12 +10,11 @@ public class Board {
 	private static final Integer BOARD_SIZE = 10;
 
 	private List<Code> guesses;
-
 	private List<Key> feedbacks;
 
 	public Board() {
-		guesses = new ArrayList<Code>();
-		feedbacks = new ArrayList<Key>();
+		this.guesses = new ArrayList<Code>();
+		this.feedbacks = new ArrayList<Key>();
 	}
 
 	public void setSecret(Code secret) {
@@ -23,16 +22,16 @@ public class Board {
 	}
 
 	public void add(Code guess) {
-		guesses.add(guess);
+		this.guesses.add(guess);
 		add(new Key(secret, guess));
 	}
 
 	private void add(Key feedback) {
-		feedbacks.add(feedback);
+		this.feedbacks.add(feedback);
 	}
 
 	public boolean isWinner() {
-		return feedbacks.get(feedbacks.size() - 1).isAllBlack();
+		return !feedbacks.isEmpty() && feedbacks.get(feedbacks.size() - 1).isAllBlack();
 	}
 
 	public boolean isBoardComplete() {
@@ -57,5 +56,26 @@ public class Board {
 			printableFeedbacks.add(k.write());
 		}
 		return printableFeedbacks;
+	}
+	
+	public void update(BoardMemento memento) {
+		this.guesses = new ArrayList<Code>(memento.getGuesses());
+		this.feedbacks = new ArrayList<Key>(memento.getFeedbacks());
+	}
+
+	public List<Code> getGuesses() {
+		return guesses;
+	}
+
+	public void setGuesses(List<Code> guesses) {
+		this.guesses = guesses;
+	}
+
+	public List<Key> getFeedbacks() {
+		return feedbacks;
+	}
+
+	public void setFeedbacks(List<Key> feedbacks) {
+		this.feedbacks = feedbacks;
 	}
 }

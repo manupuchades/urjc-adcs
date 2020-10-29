@@ -10,5 +10,5 @@ public abstract class CodeBreakerController {
 		this.board = board;
 	}
 
-	public abstract void makeGuess(); 
+	public abstract void play(); 
 }
