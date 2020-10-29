@@ -1,2 +1,2 @@
-# Mastermind v3.1
+# Mastermind v3.2
 `Solución ampliada`
