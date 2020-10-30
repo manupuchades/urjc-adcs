@@ -1,4 +1,4 @@
-package mastermind.controllers.players;
+package mastermind.controllers.players.codebrakers;
 
 import mastermind.models.Board;
 

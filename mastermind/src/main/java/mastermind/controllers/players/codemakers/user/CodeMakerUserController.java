@@ -1,8 +1,9 @@
-package mastermind.controllers.players;
+package mastermind.controllers.players.codemakers.user;
 
+import mastermind.controllers.players.codemakers.CodeMakerController;
 import mastermind.models.Board;
 import mastermind.models.Code;
-import mastermind.views.EnterSecretCodeView;
+import mastermind.views.console.readers.EnterSecretCodeView;
 
 public class CodeMakerUserController extends CodeMakerController{
 

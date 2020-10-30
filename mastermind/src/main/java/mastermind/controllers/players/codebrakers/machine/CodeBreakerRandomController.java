@@ -1,5 +1,6 @@
-package mastermind.controllers.players;
+package mastermind.controllers.players.codebrakers.machine;
 
+import mastermind.controllers.players.codebrakers.CodeBreakerController;
 import mastermind.models.Board;
 import mastermind.models.Code;
 

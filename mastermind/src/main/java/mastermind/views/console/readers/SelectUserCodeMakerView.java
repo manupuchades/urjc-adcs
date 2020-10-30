@@ -1,7 +1,7 @@
-package mastermind.views;
+package mastermind.views.console.readers;
 
-import mastermind.ui.Dialog;
 import mastermind.ui.MessageLibrary;
+import mastermind.views.console.Dialog;
 
 public class SelectUserCodeMakerView {
 	private static final String INPUT_VALIDATOR = "^[UuMm]$";

@@ -1,4 +1,4 @@
-package mastermind.ui;
+package mastermind.views.console;
 
 import java.io.BufferedReader;
 import java.io.IOException;

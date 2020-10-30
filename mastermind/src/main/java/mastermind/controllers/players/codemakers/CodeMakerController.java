@@ -1,9 +1,9 @@
-package mastermind.controllers.players;
+package mastermind.controllers.players.codemakers;
 
 import mastermind.models.Board;
 import mastermind.models.Code;
-import mastermind.views.GameOverView;
-import mastermind.views.WinnerView;
+import mastermind.views.console.writers.GameOverView;
+import mastermind.views.console.writers.WinnerView;
 
 public abstract class CodeMakerController {
 	private Board board;

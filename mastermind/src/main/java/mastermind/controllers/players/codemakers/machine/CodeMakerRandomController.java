@@ -1,5 +1,6 @@
-package mastermind.controllers.players;
+package mastermind.controllers.players.codemakers.machine;
 
+import mastermind.controllers.players.codemakers.CodeMakerController;
 import mastermind.models.Board;
 import mastermind.models.Code;
 

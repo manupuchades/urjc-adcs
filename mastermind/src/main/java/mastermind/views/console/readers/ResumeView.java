@@ -1,9 +1,9 @@
-package mastermind.views;
+package mastermind.views.console.readers;
 
 import org.apache.commons.lang3.StringUtils;
 
-import mastermind.ui.Dialog;
 import mastermind.ui.MessageLibrary;
+import mastermind.views.console.Dialog;
 
 public class ResumeView {
 	

@@ -1,11 +1,11 @@
 package mastermind.controllers;
 
 import mastermind.models.Board;
-import mastermind.views.BoardView;
-import mastermind.views.ResumeView;
-import mastermind.views.SelectUserCodeBreakerView;
-import mastermind.views.SelectUserCodeMakerView;
-import mastermind.views.WelcomeView;
+import mastermind.views.console.readers.ResumeView;
+import mastermind.views.console.readers.SelectUserCodeBreakerView;
+import mastermind.views.console.readers.SelectUserCodeMakerView;
+import mastermind.views.console.writers.BoardView;
+import mastermind.views.console.writers.WelcomeView;
 
 public class GameController {
 

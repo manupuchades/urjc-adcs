@@ -21,11 +21,4 @@ public class BoardMemento {
 	public List<Key> getFeedbacks() {
 		return feedbacks;
 	}
-	
-	void write() {
-		System.out.println(">>>>>> BOARD MEMENTO");
-		for (int i = 0; i < guesses.size(); i++) {
-			System.out.println("feedback : " + feedbacks.get(i).write() + " | guess : " + guesses.get(i).write()  );
-		}
-	}
 }

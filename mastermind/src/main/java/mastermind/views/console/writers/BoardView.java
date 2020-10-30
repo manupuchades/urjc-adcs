@@ -1,9 +1,9 @@
-package mastermind.views;
+package mastermind.views.console.writers;
 
 import java.util.List;
 
-import mastermind.ui.Dialog;
-import mastermind.ui.ConsoleFormat;
+import mastermind.views.console.ConsoleFormat;
+import mastermind.views.console.Dialog;
 
 public class BoardView {
 
@@ -28,5 +28,4 @@ public class BoardView {
 		}
 		return output;
 	}
-
 }

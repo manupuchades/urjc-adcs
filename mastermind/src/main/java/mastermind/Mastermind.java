@@ -1,9 +1,9 @@
 package mastermind;
 
 import mastermind.controllers.GameController;
-import mastermind.controllers.PlayersFactory;
-import mastermind.controllers.players.CodeBreakerController;
-import mastermind.controllers.players.CodeMakerController;
+import mastermind.controllers.players.PlayersFactory;
+import mastermind.controllers.players.codebrakers.CodeBreakerController;
+import mastermind.controllers.players.codemakers.CodeMakerController;
 
 public class Mastermind {
 

@@ -1,13 +1,13 @@
-package mastermind.controllers;
+package mastermind.controllers.players;
 
 import org.apache.commons.lang3.StringUtils;
 
-import mastermind.controllers.players.CodeBreakerController;
-import mastermind.controllers.players.CodeBreakerRandomController;
-import mastermind.controllers.players.CodeBreakerUserController;
-import mastermind.controllers.players.CodeMakerController;
-import mastermind.controllers.players.CodeMakerRandomController;
-import mastermind.controllers.players.CodeMakerUserController;
+import mastermind.controllers.players.codebrakers.CodeBreakerController;
+import mastermind.controllers.players.codebrakers.machine.CodeBreakerRandomController;
+import mastermind.controllers.players.codebrakers.user.CodeBreakerUserController;
+import mastermind.controllers.players.codemakers.CodeMakerController;
+import mastermind.controllers.players.codemakers.machine.CodeMakerRandomController;
+import mastermind.controllers.players.codemakers.user.CodeMakerUserController;
 import mastermind.models.Board;
 
 public class PlayersFactory {

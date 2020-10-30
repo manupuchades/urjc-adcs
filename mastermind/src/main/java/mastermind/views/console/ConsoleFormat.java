@@ -1,4 +1,4 @@
-package mastermind.ui;
+package mastermind.views.console;
 
 public enum ConsoleFormat {
 	TITLE ("|    *** %s ***    |"),

@@ -1,8 +1,8 @@
-package mastermind.views;
+package mastermind.views.console.writers;
 
-import mastermind.ui.Dialog;
 import mastermind.ui.MessageLibrary;
-import mastermind.ui.ConsoleFormat;
+import mastermind.views.console.ConsoleFormat;
+import mastermind.views.console.Dialog;
 
 public class WinnerView {
 	

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Code {
 	
-	protected static final int CODE_SIZE = 4;
+	public static final int CODE_SIZE = 4;
 	
 	private CodeColor[] code;
 	
