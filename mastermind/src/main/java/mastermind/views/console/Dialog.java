@@ -23,10 +23,6 @@ public class Dialog {
 		write(String.format(message.getMessage(), args));
 	}
 
-	public static void write(MessageLibrary message) {
-		write(message.getMessage());
-	}
-
 	public static void write(String output) {
 		Console.getInstance().write(output);
 	}
