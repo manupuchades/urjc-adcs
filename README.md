@@ -1,2 +1,2 @@
-# Mastermind v3.2
-`Solución ampliada`
+# Mastermind v4.0
+`Solución ampliada - cambio de arquitectura`
