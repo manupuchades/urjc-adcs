@@ -1,32 +1,23 @@
 package mastermind;
 
-import mastermind.controllers.GameController;
-import mastermind.controllers.players.PlayersFactory;
-import mastermind.controllers.players.codebrakers.CodeBreakerController;
-import mastermind.controllers.players.codemakers.CodeMakerController;
+import mastermind.models.Session;
+import mastermind.views.mvc.GameView;
 
 public class Mastermind {
 
-	private GameController game;
-	private CodeMakerController codeMaker;
-	private CodeBreakerController codeBreaker;
-	
-	Mastermind(){
-		this.game = new GameController();
-		this.codeMaker = PlayersFactory.getCodeMaker(this.game.getBoard(), this.game.readCodeMakerType());
-		this.codeBreaker = PlayersFactory.getCodeBreaker(this.game.getBoard(), this.game.readCodeBreakerType());
+	private Session game;
+	private GameView view;
+
+	Mastermind() {
+		this.game = new Session();
+		this.view = new GameView();
 	}
 
 	public static void main(String[] args) {
-		do {
-			new Mastermind().play();
-		} while (GameController.resume());
+		new Mastermind().play();
 	}
 
 	private void play() {
-		do {
-			this.codeBreaker.play();
-			this.game.write();
-		} while (this.codeMaker.continueGame());
+		view.show(this.game);
 	}
 }

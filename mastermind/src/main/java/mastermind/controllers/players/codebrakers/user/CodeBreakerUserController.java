@@ -3,6 +3,7 @@ package mastermind.controllers.players.codebrakers.user;
 import mastermind.controllers.players.codebrakers.CodeBreakerController;
 import mastermind.models.Board;
 import mastermind.models.BoardRegistry;
+import mastermind.models.Session;
 import mastermind.views.console.readers.EnterActionView;
 
 public class CodeBreakerUserController extends CodeBreakerController {
@@ -15,6 +16,6 @@ public class CodeBreakerUserController extends CodeBreakerController {
 	}
 
 	public void play() {
-		new EnterActionView(UserControllerFactory.getControllers(this.board, this.registry)).read();
+		new EnterActionView(UserControllerFactory.getControllers(new Session(this.board, this.registry))).read();
 	}
 }

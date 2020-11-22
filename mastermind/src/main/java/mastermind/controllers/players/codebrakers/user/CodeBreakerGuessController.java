@@ -1,18 +1,17 @@
 package mastermind.controllers.players.codebrakers.user;
 
-import mastermind.models.Board;
-import mastermind.models.BoardRegistry;
 import mastermind.models.Code;
+import mastermind.models.Session;
 
 public class CodeBreakerGuessController extends UserController {
 
-	CodeBreakerGuessController(Board board, BoardRegistry registry) {
-		super(board, registry);
+	CodeBreakerGuessController(Session session) {
+		super(session);
 	}
 
 	void play(String input) {
-		this.board.add(new Code(input));
-		registry.save(board);
+		this.session.getBoard().add(new Code(input));
+		session.getRegistry().save(session.getBoard());
 	}
 
 	boolean isValid(String input) {

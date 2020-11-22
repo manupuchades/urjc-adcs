@@ -1,16 +1,13 @@
 package mastermind.controllers.players.codebrakers.user;
 
-import mastermind.models.Board;
-import mastermind.models.BoardRegistry;
+import mastermind.models.Session;
 import mastermind.views.ViewObserver;
 
 public abstract class UserController implements ViewObserver {
-	Board board;
-	BoardRegistry registry;
+	Session session;
 
-	UserController(Board board, BoardRegistry registry) {
-		this.board = board;
-		this.registry = registry;
+	UserController(Session session) {
+		this.session = session;
 	}
 
 	public void receive(String input) {

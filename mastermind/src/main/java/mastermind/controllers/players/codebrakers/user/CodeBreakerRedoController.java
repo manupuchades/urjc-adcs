@@ -2,20 +2,19 @@ package mastermind.controllers.players.codebrakers.user;
 
 import org.apache.commons.lang3.StringUtils;
 
-import mastermind.models.Board;
-import mastermind.models.BoardRegistry;
+import mastermind.models.Session;
 import mastermind.views.console.writers.ErrorView;
 
 public class CodeBreakerRedoController extends UserController {
 
 	private static final String REDO_COMMAND = "R";
 
-	CodeBreakerRedoController(Board board, BoardRegistry registry) {
-		super(board, registry);
+	CodeBreakerRedoController(Session session) {
+		super(session);
 	}
 
 	void play(String input) {
-		this.board.update(this.registry.undo());
+		this.session.getBoard().update(this.session.getRegistry().undo());
 	}
 
 	boolean isValid(String input) {
@@ -23,7 +22,7 @@ public class CodeBreakerRedoController extends UserController {
 	}
 
 	boolean isPossible() {
-		if (!this.registry.isRedoPossible()) {
+		if (!this.session.getRegistry().isRedoPossible()) {
 			ErrorView.write();
 			return false;
 		}
