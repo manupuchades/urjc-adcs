@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
+	
+	private List<BoardObserver> observers;
 
 	private Code secret;
 
@@ -15,6 +17,7 @@ public class Board {
 	public Board() {
 		this.guesses = new ArrayList<Code>();
 		this.feedbacks = new ArrayList<Key>();
+		this.observers = new ArrayList<BoardObserver>();
 	}
 
 	public void setSecret(Code secret) {
@@ -24,6 +27,7 @@ public class Board {
 	public void add(Code guess) {
 		this.guesses.add(guess);
 		add(new Key(secret, guess));
+		notifyObservers();
 	}
 
 	private void add(Key feedback) {
@@ -61,6 +65,17 @@ public class Board {
 	public void update(BoardMemento memento) {
 		this.guesses = new ArrayList<Code>(memento.getGuesses());
 		this.feedbacks = new ArrayList<Key>(memento.getFeedbacks());
+		notifyObservers();
+	}
+	
+	public void addObserver(BoardObserver observer) {
+		observers.add(observer);
+	}
+	
+	private void notifyObservers() {
+		for(BoardObserver observer: observers) {
+			observer.refresh();
+		}
 	}
 
 	public List<Code> getGuesses() {

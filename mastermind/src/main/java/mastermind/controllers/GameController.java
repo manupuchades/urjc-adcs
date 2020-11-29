@@ -10,14 +10,14 @@ import mastermind.views.console.writers.WelcomeView;
 public class GameController {
 
 	private Board board;
+	
+	private BoardView boardView;
 
 	public GameController() {
 		WelcomeView.write();
 		this.board = new Board();
-	}
-	
-	public void write() {
-		BoardView.write(Board.getBoardSize(), board.getPrintableGuesses(), board.getPrintableFeedbacks());
+		boardView = new BoardView(this.board);
+		this.board.addObserver(boardView);
 	}
 	
 	public String readCodeBreakerType() {
