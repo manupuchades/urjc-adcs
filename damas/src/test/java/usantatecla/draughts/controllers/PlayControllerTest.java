@@ -1,18 +1,21 @@
 package usantatecla.draughts.controllers;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.nullValue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-import static org.mockito.Mockito.*;
-import static org.mockito.MockitoAnnotations.initMocks;
-
-import usantatecla.draughts.models.Error;
 import usantatecla.draughts.CoordinateBuilder;
 import usantatecla.draughts.models.Coordinate;
+import usantatecla.draughts.models.Error;
 import usantatecla.draughts.models.Game;
 import usantatecla.draughts.models.State;
 
@@ -49,12 +52,12 @@ public class PlayControllerTest {
     }
 
     @Test
-    public void givenSUTWhenMoveCoordinatesThenShouldCallToMoveController(){
+    public void testEmptyOrigin(){
         Coordinate firstCoordinate = new CoordinateBuilder().build();
         Coordinate secondCoordinate = new CoordinateBuilder().build();
         when(moveController.move(firstCoordinate, secondCoordinate)).thenReturn(Error.EMPTY_ORIGIN);
 
-        assertThat(sut.move(firstCoordinate, secondCoordinate), is(Error.EMPTY_ORIGIN));
+        assertThat(sut.move(firstCoordinate, secondCoordinate), is(nullValue()));
     }
 
     @Test(expected = AssertionError.class)

@@ -11,12 +11,6 @@ import usantatecla.draughts.controllers.StartController;
 
 public class StartViewTest {
 
-	@Mock
-    private GameView gameView;
-
-    @Mock
-    private StartController startController;
-
     @InjectMocks
     private StartView sut;
 
